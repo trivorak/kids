@@ -1,2 +1,3 @@
 # kids
-Scripts created for or with my kids
+
+Scripts created for/with my kids
