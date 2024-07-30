@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 from time import sleep
 from secrets import randbelow
@@ -7,16 +5,13 @@ from secrets import randbelow
 def clearscreen():
     os.system('clear')
 
-def fakeRolls(num):
+def multiRoll(num):
     clearscreen()
     for i in range(num):
+        clearscreen()
         for i in range(len(pArray)):
             print(f'{pArray[i]}: {parts[randbelow(len(parts))]}')
         sleep(0.015)
-        clearscreen()
-
-def printResults():
-    pass
 
 # Variables
 pArray = []
@@ -39,12 +34,8 @@ print(f'Number of players: {len(pArray)}')
 sleep(1)
 clearscreen()
 
+# Main Loop
 while mainLoop:
     clearscreen()
-
-    fakeRolls(20)
-    for i in range(len(pArray)):
-        randSelection = randbelow(len(parts))
-        print(f'{pArray[i]}: {parts[randSelection]}')
-
+    multiRoll(20)
     input("Press ENTER for next round")
